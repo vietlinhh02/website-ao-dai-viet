@@ -1,0 +1,4 @@
+/* Placeholder for hero banner image */
+body {
+    margin: 0;
+}

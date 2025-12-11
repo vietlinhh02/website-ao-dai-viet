@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'AoDai Logo';
+    src: url('../assets/fonts/logo-font.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'AoDai Display';
+    src: url('../assets/fonts/display-font.otf') format('opentype');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: block;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Crimson+Text:wght@400;600;700&display=swap');
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global Styles */
+p {
+    font-family: 'AoDai Display', 'Crimson Text', serif;
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+.hover-zoom {
+    overflow: hidden;
+}
+
+.hover-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.hover-zoom:hover img {
+    transform: scale(1.1);
+}

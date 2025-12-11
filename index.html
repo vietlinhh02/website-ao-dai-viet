@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AoDaiViet - Vẻ Đẹp Áo Dài Việt Nam</title>
+    
+    <!-- Preload Custom Fonts -->
+    <link rel="preload" href="assets/fonts/logo-font.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/display-font.otf" as="font" type="font/otf" crossorigin>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#DC143C',
+                        'text-dark': '#1a1a1a',
+                        'text-gray': '#666666',
+                    },
+                    fontFamily: {
+                        'logo': ['AoDai Logo', 'Playfair Display', 'serif'],
+                        'display': ['AoDai Display', 'Crimson Text', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <div class="flex items-center justify-between h-[76px]">
+                <div class="logo flex items-center gap-4">
+                    <h1 id="logo-btn" class="font-logo text-white text-[24px] md:text-[32px] font-bold tracking-[2px] uppercase cursor-pointer flex items-center">AODAIVIET</h1>
+                </div>
+                <nav class="nav hidden md:flex items-center gap-4 lg:gap-6 xl:gap-9 xl:mr-[-20%] flex-nowrap whitespace-nowrap">
+                    <div class="nav-item flex items-center gap-1 text-white cursor-pointer px-2 lg:px-3 py-2 hover:opacity-85 transition-opacity relative group flex-shrink-0">
+                        <span>Nội Dung</span>
+                        <span class="material-icons text-[20px] lg:text-[24px]">arrow_drop_down</span>
+                        <div class="dropdown-menu absolute top-full mt-5 left-1/2 -translate-x-1/2 bg-white rounded shadow-lg py-3 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                            <a href="#nguon-goc" class="block px-5 py-2.5 text-text-dark hover:bg-gray-100 hover:text-primary transition-colors">Nguồn Gốc & Lịch sử</a>
+                            <a href="#the-loai" class="block px-5 py-2.5 text-text-dark hover:bg-gray-100 hover:text-primary transition-colors">Các Thể Loại Áo Dài</a>
+                            <a href="#y-nghia" class="block px-5 py-2.5 text-text-dark hover:bg-gray-100 hover:text-primary transition-colors">Ý Nghĩa Văn Hoá</a>
+                            <a href="#anh" class="block px-5 py-2.5 text-text-dark hover:bg-gray-100 hover:text-primary transition-colors">Ảnh | Khoảnh Khắc</a>
+                        </div>
+                    </div>
+                    <a href="#anh" class="nav-item flex items-center gap-1 text-white cursor-pointer px-2 lg:px-3 py-2 hover:opacity-85 transition-opacity flex-shrink-0">Ảnh</a>
+                    <div class="nav-item flex items-center gap-1 text-white cursor-pointer px-2 lg:px-3 py-2 hover:opacity-85 transition-opacity relative group flex-shrink-0">
+                        <span>Dịch vụ</span>
+                        <span class="material-icons text-[20px] lg:text-[24px]">arrow_drop_down</span>
+                        <div class="dropdown-menu absolute top-full mt-5 left-1/2 -translate-x-1/2 bg-white rounded shadow-lg py-3 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                            <a href="#thue-ao-dai" class="block px-5 py-2.5 text-text-dark hover:bg-gray-100 hover:text-primary transition-colors">Thuê Áo Dài</a>
+                            <a href="#thue-tho-chup" class="block px-5 py-2.5 text-text-dark hover:bg-gray-100 hover:text-primary transition-colors">Thuê Thợ Chụp</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="flex items-center gap-3 lg:gap-6">
+                    <div class="hidden md:flex items-center gap-2 px-3 lg:px-4 py-2.5 bg-white rounded-[21px] w-[180px] lg:w-[250px] xl:w-[299px] shadow-sm flex-shrink-0">
+                        <input type="text" placeholder="Tìm kiếm..." class="border-0 bg-transparent outline-none w-full text-sm text-text-dark placeholder:text-gray-400 placeholder:opacity-70">
+                        <span class="material-icons text-primary text-[20px] cursor-pointer">search</span>
+                    </div>
+                    <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-sm flex items-center justify-center bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden bg-white absolute top-[76px] left-0 w-full shadow-lg overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+                <div class="flex flex-col gap-4 py-4 px-6">
+                    <div class="flex items-center gap-2 px-4 py-2.5 bg-gray-100 rounded-[21px] w-full shadow-sm mb-4">
+                        <input type="text" placeholder="Tìm kiếm..." class="border-0 bg-transparent outline-none w-full text-sm text-text-dark placeholder:text-gray-400 placeholder:opacity-70">
+                        <span class="material-icons text-primary text-[20px] cursor-pointer">search</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="font-bold text-primary border-b pb-2">Nội Dung</div>
+                        <a href="#nguon-goc" class="pl-4 py-2 text-text-dark hover:text-primary">Nguồn Gốc & Lịch sử</a>
+                        <a href="#the-loai" class="pl-4 py-2 text-text-dark hover:text-primary">Các Thể Loại Áo Dài</a>
+                        <a href="#y-nghia" class="pl-4 py-2 text-text-dark hover:text-primary">Ý Nghĩa Văn Hoá</a>
+                        <a href="#anh" class="pl-4 py-2 text-text-dark hover:text-primary">Ảnh | Khoảnh Khắc</a>
+                    </div>
+                    <a href="#anh" class="font-bold text-primary border-b pb-2 pt-2">Ảnh</a>
+                    <div class="flex flex-col gap-2 pt-2">
+                        <div class="font-bold text-primary border-b pb-2">Dịch vụ</div>
+                        <a href="#thue-ao-dai" class="pl-4 py-2 text-text-dark hover:text-primary">Thuê Áo Dài</a>
+                        <a href="#thue-tho-chup" class="pl-4 py-2 text-text-dark hover:text-primary">Thuê Thợ Chụp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <div class="flex flex-col gap-12">
+                <div class="w-full h-[300px] md:h-[500px] rounded-lg overflow-hidden bg-gray-100">
+                    <img src="assets/AnhAoDai/1.png" alt="Áo Dài Việt Nam" class="w-full h-full object-cover object-[50%_20%]">
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h2 class="font-display text-[28px] font-bold text-primary text-center">LỜI NÓI ĐẦU</h2>
+                    <p class="text-base leading-relaxed text-text-gray text-justify">
+                        Áo dài không chỉ là trang phục — đó là nét văn hóa, là ký ức, là niềm tự hào dịu dàng của người Việt. 
+                        Chúng tôi xây dựng trang web này với mong muốn lưu giữ, chia sẻ và lan tỏa những câu chuyện quanh chiếc áo dài – 
+                        từ lịch sử hình thành, từng đường kim nếp gấp, cho đến dấu ấn của áo dài trong đời sống hiện đại. 
+                        Bên cạnh nguồn kiến thức được cập nhật thường xuyên, chúng tôi cung cấp dịch vụ Đặt Thuê Áo Dài cho các dịp 
+                        lễ – sự kiện – kỷ yếu – chụp ảnh cá nhân, và dịch vụ Đặt Thuê Thợ Chụp để ghi lại những khoảnh khắc đẹp nhất, 
+                        hoàn hảo nhất của bạn cùng tà áo Việt.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <h2 class="font-display text-[32px] font-bold text-primary mb-12 text-center relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-[3px] after:bg-primary">Về <span class="font-logo">AODAIVIET</span></h2>
+            
+            <!-- Nguồn Gốc & Lịch sử -->
+            <div class="flex flex-col md:flex-row gap-9 mb-12 items-start animate-fade-in" id="nguon-goc">
+                <div class="flex-1 w-full md:max-w-[615px] h-[300px] md:h-[587px] rounded-lg overflow-hidden bg-gray-100 hover-zoom">
+                    <img src="assets/AnhAoDai/2.jpg" alt="Lịch sử áo dài" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="flex-1 w-full md:max-w-[489px] flex flex-col gap-6">
+                    <h3 class="font-display text-2xl font-bold text-primary text-right">Nguồn Gốc & Lịch sử</h3>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-base leading-relaxed text-text-gray text-justify">
+                            Tìm hiểu hành trình ra đời và phát triển của áo dài qua từng giai đoạn lịch sử Việt Nam. 
+                            Từ những thiết kế sơ khai đến vẻ đẹp thanh thoát hiện đại, mỗi thời kỳ đều mang một dấu ấn riêng. 
+                            Đây là nơi bạn có thể khám phá câu chuyện phía sau tà áo — câu chuyện của văn hóa và bản sắc.
+                        </p>
+                        <p class="text-sm text-primary font-medium leading-relaxed">#LichsuAodai #NguongocAodai #PhunuVietNam</p>
+                    </div>
+                    <button class="bg-white text-primary border-2 border-primary py-3 px-8 text-base font-medium rounded cursor-pointer transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 active:translate-y-0">Tìm Hiểu Ngay</button>
+                </div>
+            </div>
+
+            <!-- Các Thể Loại -->
+            <div class="flex flex-col md:flex-row-reverse gap-9 mb-12 items-start animate-fade-in" id="the-loai">
+                <div class="flex-1 w-full md:max-w-[615px] h-[300px] md:h-[587px] rounded-lg overflow-hidden bg-gray-100 hover-zoom">
+                    <img src="assets/AnhAoDai/3.jpg" alt="Các loại áo dài" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="flex-1 w-full md:max-w-[489px] flex flex-col gap-6">
+                    <h3 class="font-display text-2xl font-bold text-primary text-right">Các Thể Loại Áo Dài Ưa Chuộng Hiện Nay</h3>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-base leading-relaxed text-text-gray text-justify">
+                            Khám phá xu hướng áo dài được yêu thích nhất hiện nay. Chúng tôi giới thiệu đặc điểm từng loại, 
+                            phù hợp với từng mục đích sử dụng, giúp bạn lựa chọn phong cách hợp nhất với vóc dáng, 
+                            cá tính và sự kiện.
+                        </p>
+                        <p class="text-sm text-primary font-medium leading-relaxed">#TheloaiAodai #PhongcachAodai #PhunuVietNam</p>
+                    </div>
+                    <button class="bg-white text-primary border-2 border-primary py-3 px-8 text-base font-medium rounded cursor-pointer transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 active:translate-y-0">Tìm Hiểu Ngay</button>
+                </div>
+            </div>
+
+            <!-- Ý Nghĩa -->
+            <div class="flex flex-col md:flex-row gap-9 mb-12 items-start animate-fade-in" id="y-nghia">
+                <div class="flex-1 w-full md:max-w-[615px] h-[300px] md:h-[587px] rounded-lg overflow-hidden bg-gray-100 hover-zoom">
+                    <img src="assets/AnhAoDai/4.jpg" alt="Ý nghĩa áo dài" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="flex-1 w-full md:max-w-[489px] flex flex-col gap-6">
+                    <h3 class="font-display text-2xl font-bold text-primary text-right">Ý Nghĩa Văn Hoá Của Áo Dài</h3>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-base leading-relaxed text-text-gray text-justify">
+                            Áo dài không chỉ đẹp mà còn chứa đựng nhiều tầng ý nghĩa: sự duyên dáng, lễ nghi, gia đình, 
+                            truyền thống và lòng tự tôn dân tộc. Sub-web này giúp bạn hiểu sâu hơn về giá trị mà tà áo mang lại 
+                            trong đời sống người Việt — từ lễ hội, học đường đến các nghi thức trọng đại.
+                        </p>
+                        <p class="text-sm text-primary font-medium leading-relaxed">#YNghiaAodai #VanHoaAodai #PhunuVietNam</p>
+                    </div>
+                    <button class="bg-white text-primary border-2 border-primary py-3 px-8 text-base font-medium rounded cursor-pointer transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 active:translate-y-0">Tìm Hiểu Ngay</button>
+                </div>
+            </div>
+
+            <!-- Ảnh -->
+            <div class="flex flex-col md:flex-row-reverse gap-9 items-start animate-fade-in" id="anh">
+                <div class="flex-1 w-full md:max-w-[552px]">
+                    <div class="flex flex-col gap-4">
+                        <!-- Large Image -->
+                        <div class="w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden bg-gray-100">
+                            <img src="assets/AnhAoDai/5.png" alt="Gallery 1" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <!-- Two Small Images -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="w-full h-[200px] md:h-[300px] rounded-lg overflow-hidden bg-gray-100">
+                                <img src="assets/AnhAoDai/6.png" alt="Gallery 2" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                            </div>
+                            <div class="w-full h-[200px] md:h-[300px] rounded-lg overflow-hidden bg-gray-100">
+                                <img src="assets/AnhAoDai/7.png" alt="Gallery 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 w-full md:max-w-[489px] flex flex-col gap-6">
+                    <h3 class="font-display text-2xl font-bold text-primary text-left">Ảnh | Khoảnh Khắc Cùng Áo Dài</h3>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-base leading-relaxed text-text-gray text-justify">
+                            Nơi lưu giữ hình ảnh của những khách hàng đã tin chọn áo dài của chúng tôi. 
+                            Mỗi bức ảnh không chỉ là feedback mà là một câu chuyện, một khoảnh khắc đáng nhớ được kể 
+                            bằng nụ cười và tà áo Việt. Thư viện ảnh được cập nhật hàng tháng.
+                        </p>
+                        <p class="text-sm text-primary font-medium leading-relaxed">#KiniemAodai #AnhAodai</p>
+                    </div>
+                    <button class="bg-white text-primary border-2 border-primary py-3 px-8 text-base font-medium rounded cursor-pointer transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 active:translate-y-0">Tìm Hiểu Ngay</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <h2 class="font-display text-[32px] font-bold text-primary mb-12 text-center relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-[3px] after:bg-primary">Dịch vụ <span class="font-logo">AODAIVIET</span></h2>
+            
+            <!-- Banner Image -->
+            <div class="w-full h-[300px] md:h-[500px] rounded-lg overflow-hidden mb-12 bg-white">
+                <img src="assets/AnhAoDai/8.jpg" alt="Dịch vụ áo dài" class="w-full h-full object-cover object-[50%_35%]">
+            </div>
+
+            <!-- Thuê Áo Dài -->
+            <div class="mb-16" id="thue-ao-dai">
+                <h3 class="font-display text-[28px] font-bold text-primary text-left mb-6">Dịch Vụ Thuê Áo Dài</h3>
+                <p class="text-base leading-relaxed text-text-gray mb-8">
+                    Dịch vụ cung cấp áo dài đa phong cách, đa kích cỡ và đa lựa chọn phụ kiện đi kèm. 
+                    Hỗ trợ tư vấn phối đồ theo concept, phù hợp cho chụp ảnh, sự kiện, lễ cưới, lễ kỷ niệm 
+                    hoặc tham quan du lịch.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-9 mb-8">
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full h-[410px] rounded-lg overflow-hidden bg-white">
+                            <img src="assets/AnhAoDai/9.png" alt="Áo Dài Tú Hường" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-center text-lg font-medium text-text-dark">Áo Dài Tú Hường</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full h-[410px] rounded-lg overflow-hidden bg-white">
+                            <img src="assets/AnhAoDai/10.png" alt="Áo Dài Lục Lam" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-center text-lg font-medium text-text-dark">Áo Dài Lục Lam</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full h-[410px] rounded-lg overflow-hidden bg-white">
+                            <img src="assets/AnhAoDai/11.png" alt="Áo Dài Tím Nguyệt" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-center text-lg font-medium text-text-dark">Áo Dài Tím Nguyệt</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full h-[410px] rounded-lg overflow-hidden bg-white">
+                            <img src="assets/AnhAoDai/12.png" alt="Áo Dài Bạch Dạ" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-center text-lg font-medium text-text-dark">Áo Dài Bạch Dạ</p>
+                    </div>
+                </div>
+                <button class="w-full bg-primary text-white border-0 py-3.5 px-8 text-lg font-medium rounded cursor-pointer transition-all duration-300 hover:bg-[#b71c1c] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 active:translate-y-0">Đặt Thuê Ngay</button>
+            </div>
+
+            <!-- Thuê Thợ Chụp -->
+            <div id="thue-tho-chup">
+                <h3 class="font-display text-[28px] font-bold text-primary text-left mb-6">Dịch Vụ Thuê Thợ Chụp Hình</h3>
+                <p class="text-base leading-relaxed text-text-gray mb-8">
+                    Đội ngũ nhiếp ảnh gia chuyên chụp áo dài, am hiểu góc máy, ánh sáng và bố cục để tôn lên vẻ đẹp của bạn. 
+                    Cung cấp nhiều gói chụp ảnh linh hoạt — cá nhân, nhóm bạn, kỷ yếu, pre-wedding — 
+                    đi kèm hỗ trợ chỉnh ảnh chuyên nghiệp.
+                </p>
+                <div class="w-full h-[300px] md:h-[450px] rounded-lg overflow-hidden mb-8 bg-white">
+                    <img src="assets/AnhAoDai/13.jpg" alt="Dịch vụ chụp ảnh" class="w-full h-full object-cover">
+                </div>
+                <button class="w-full bg-primary text-white border-0 py-3.5 px-8 text-lg font-medium rounded cursor-pointer transition-all duration-300 hover:bg-[#b71c1c] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 active:translate-y-0">Đặt Lịch Ngay</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <div class="flex flex-col gap-6">
+                <div>
+                    <h3 class="font-logo text-2xl font-bold text-primary tracking-[0.5px]">Aodaiviet</h3>
+                </div>
+                <p class="text-sm leading-relaxed text-white/80">
+                    <span class="font-logo">AODAIVIET</span> là một trong những thương hiệu tiên phong trên thị trường áo dài thêu tay, 
+                    bằng những đường nét bay bổng và kĩ thuật tinh xảo, phối hợp với từng gam màu vô cùng tinh tế.
+                </p>
+                <div class="flex flex-col gap-2">
+                    <p class="text-sm text-white/80"><strong class="text-white">Địa chỉ:</strong> Km9 Trường Đại Học Hà Nội - Nam Từ Liêm</p>
+                    <p class="text-sm text-white/80"><strong class="text-white">SĐT:</strong> 0987.675.456</p>
+                    <p class="text-sm text-white/80"><strong class="text-white">Email:</strong> <span class="font-logo">Aodaiviet</span>345@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
