@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các Thể Loại Áo Dài - AoDaiViet</title>
+    
+    <!-- Preload Custom Fonts -->
+    <link rel="preload" href="assets/fonts/logo-font.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/display-font.otf" as="font" type="font/otf" crossorigin>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#DC143C',
+                        'text-dark': '#1a1a1a',
+                        'text-gray': '#666666',
+                    },
+                    fontFamily: {
+                        'logo': ['AoDai Logo', 'Playfair Display', 'serif'],
+                        'display': ['AoDai Display', 'Crimson Text', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-black sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <div class="flex items-center justify-between h-[76px]">
+                <div class="logo flex items-center gap-4">
+                    <a href="index.html" class="no-underline">
+                        <h1 id="logo-btn" class="font-logo text-white text-[24px] md:text-[32px] font-bold tracking-[2px] uppercase cursor-pointer flex items-center">AODAIVIET</h1>
+                    </a>
+                </div>
+                <nav class="nav hidden md:flex items-center gap-4 lg:gap-6 xl:gap-9 xl:mr-[-20%] flex-nowrap whitespace-nowrap">
+                    <div class="nav-item flex items-center gap-1 text-white cursor-pointer px-2 lg:px-3 py-2 hover:opacity-85 transition-opacity relative group flex-shrink-0">
+                        <span>Nội Dung</span>
+                        <span class="material-icons text-[20px] lg:text-[24px]">arrow_drop_down</span>
+                        <div class="dropdown-menu absolute top-full mt-5 left-1/2 -translate-x-1/2 bg-white rounded shadow-lg py-3 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                            <a href="nguon-goc.html" class="block px-5 py-2.5 text-text-dark hover:bg-gray-100 hover:text-primary transition-colors">Nguồn Gốc & Lịch sử</a>
+                            <a href="the-loai.html" class="block px-5 py-2.5 text-text-dark hover:bg-gray-100 hover:text-primary transition-colors">Các Thể Loại Áo Dài</a>
+                            <a href="index.html#anh" class="block px-5 py-2.5 text-text-dark hover:bg-gray-100 hover:text-primary transition-colors">Ảnh | Khoảnh Khắc</a>
+                        </div>
+                    </div>
+                    <div class="nav-item flex items-center gap-1 text-white cursor-pointer px-2 lg:px-3 py-2 hover:opacity-85 transition-opacity relative group flex-shrink-0">
+                        <span>Dịch vụ</span>
+                        <span class="material-icons text-[20px] lg:text-[24px]">arrow_drop_down</span>
+                        <div class="dropdown-menu absolute top-full mt-5 left-1/2 -translate-x-1/2 bg-white rounded shadow-lg py-3 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                            <a href="index.html#thue-ao-dai" class="block px-5 py-2.5 text-text-dark hover:bg-gray-100 hover:text-primary transition-colors">Thuê Áo Dài</a>
+                            <a href="index.html#thue-tho-chup" class="block px-5 py-2.5 text-text-dark hover:bg-gray-100 hover:text-primary transition-colors">Thuê Thợ Chụp</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="flex items-center gap-3 lg:gap-6">
+                    <div class="hidden md:flex items-center gap-2 px-3 lg:px-4 py-2.5 bg-white rounded-[21px] w-[180px] lg:w-[250px] xl:w-[299px] shadow-sm flex-shrink-0">
+                        <input type="text" placeholder="Tìm kiếm..." class="border-0 bg-transparent outline-none w-full text-sm text-text-dark placeholder:text-gray-400 placeholder:opacity-70">
+                        <span class="material-icons text-primary text-[20px] cursor-pointer">search</span>
+                    </div>
+                    <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-sm flex items-center justify-center bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden bg-white absolute top-[76px] left-0 w-full shadow-lg overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+                <div class="flex flex-col gap-4 py-4 px-6">
+                    <div class="flex items-center gap-2 px-4 py-2.5 bg-gray-100 rounded-[21px] w-full shadow-sm mb-4">
+                        <input type="text" placeholder="Tìm kiếm..." class="border-0 bg-transparent outline-none w-full text-sm text-text-dark placeholder:text-gray-400 placeholder:opacity-70">
+                        <span class="material-icons text-primary text-[20px] cursor-pointer">search</span>
+                    </div>
+                    <a href="index.html" class="font-bold text-primary border-b pb-2">Trang chủ</a>
+                    <div class="flex flex-col gap-2 pt-2">
+                        <div class="font-bold text-primary border-b pb-2">Nội Dung</div>
+                        <a href="nguon-goc.html" class="pl-4 py-2 text-text-dark hover:text-primary">Nguồn Gốc & Lịch sử</a>
+                        <a href="the-loai.html" class="pl-4 py-2 text-text-dark hover:text-primary">Các Thể Loại Áo Dài</a>
+                        <a href="index.html#anh" class="pl-4 py-2 text-text-dark hover:text-primary">Ảnh | Khoảnh Khắc</a>
+                    </div>
+                    <div class="flex flex-col gap-2 pt-2">
+                        <div class="font-bold text-primary border-b pb-2">Dịch vụ</div>
+                        <a href="index.html#thue-ao-dai" class="pl-4 py-2 text-text-dark hover:text-primary">Thuê Áo Dài</a>
+                        <a href="index.html#thue-tho-chup" class="pl-4 py-2 text-text-dark hover:text-primary">Thuê Thợ Chụp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  
+    <main class="bg-white flex flex-col items-center w-full">
+        
+        <!-- Breadcrumb -->
+        <div class="flex gap-[10px] items-center px-[10px] py-4 w-full max-w-[1140px]">
+            <p class="font-display text-[16px] text-[#8e8e93]">Giới thiệu</p>
+            <span class="material-icons text-[#8e8e93] text-[16px]">arrow_right</span>
+            <p class="font-display text-[16px] text-[#8e8e93]">Thể Loại</p>
+        </div>
+
+        <!-- Section Title and Description -->
+        <div class="flex items-center justify-center overflow-hidden pb-[8px] px-[8px] w-full max-w-[1140px]">
+            <div class="flex flex-col gap-[12px] items-start w-full">
+                <p class="font-display text-[20px] md:text-[24px] text-black uppercase border-b-2 border-primary inline-block pb-2">
+                    Các Thể Loại Áo Dài Ưa Chuộng Hiện Nay (Bấm vào hình xem chi tiết)
+                </p>
+                <p class="font-display text-[16px] md:text-[20px] text-black text-justify">
+                    Áo dài ngày nay đã trở thành một thế giới phong phú với nhiều kiểu dáng và phong cách khác nhau. Mỗi loại áo dài mang một tinh thần riêng, phù hợp với từng bối cảnh, sự kiện và cá tính của người mặc. Dưới đây là bốn dòng áo dài tiêu biểu và được yêu thích nhất hiện nay.
+                </p>
+            </div>
+        </div>
+
+        <!-- Image Gallery - 4 Button Categories -->
+        <!-- Mobile: Compact Button Selection -->
+        <div class="flex md:hidden flex-wrap gap-2 justify-center p-4 w-full max-w-[1140px] mt-8">
+            <button class="ao-dai-button-mobile px-4 py-3 rounded-lg border-2 border-gray-300 bg-white hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 font-display text-[14px] font-semibold" data-category="ao-dai-cuoi">
+                Áo Dài Cưới
+            </button>
+            <button class="ao-dai-button-mobile px-4 py-3 rounded-lg border-2 border-gray-300 bg-white hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 font-display text-[14px] font-semibold" data-category="ao-dai-truyen-thong">
+                Áo Dài Truyền Thống
+            </button>
+            <button class="ao-dai-button-mobile px-4 py-3 rounded-lg border-2 border-gray-300 bg-white hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 font-display text-[14px] font-semibold" data-category="ao-dai-chup-hinh">
+                Áo Dài Chụp Hình
+            </button>
+            <button class="ao-dai-button-mobile px-4 py-3 rounded-lg border-2 border-gray-300 bg-white hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 font-display text-[14px] font-semibold" data-category="ao-dai-cach-tan">
+                Áo Dài Cách Tân
+            </button>
+        </div>
+
+        <!-- Desktop: Large Image Buttons -->
+        <div class="hidden md:flex flex-row gap-[10px] items-stretch justify-center p-[10px] w-full max-w-[1140px] mt-[64px]">
+            <!-- Button 1: Áo Dài Cưới -->
+            <button class="ao-dai-button relative h-[400px] md:h-[500px] w-full md:w-[277px] rounded overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer group" data-category="ao-dai-cuoi">
+                <img src="assets/images/theloai/770ef1744966d9cc2ed8534e2320662705cdc59d.png" alt="Áo Dài Cưới" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 class="font-display text-[20px] md:text-[24px] font-bold text-center uppercase">Áo Dài Cưới</h3>
+                    <p class="font-display text-[14px] md:text-[16px] text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Ngày trọng đại</p>
+                </div>
+            </button>
+
+            <!-- Button 2: Áo Dài Truyền Thống -->
+            <button class="ao-dai-button relative h-[400px] md:h-[500px] w-full md:w-[277px] rounded overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer group" data-category="ao-dai-truyen-thong">
+                <img src="assets/images/theloai/0ab301460e9a902768495e7e62fce45991333295.png" alt="Áo Dài Truyền Thống" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 class="font-display text-[20px] md:text-[24px] font-bold text-center uppercase">Áo Dài Truyền Thống</h3>
+                    <p class="font-display text-[14px] md:text-[16px] text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Bản sắc dân tộc</p>
+                </div>
+            </button>
+
+            <!-- Button 3: Áo Dài Chụp Hình -->
+            <button class="ao-dai-button relative h-[400px] md:h-[500px] w-full md:w-[277px] rounded overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer group" data-category="ao-dai-chup-hinh">
+                <img src="assets/images/theloai/ca3f3bc6dd6d3c026f92b5147843cfb193d26d56.png" alt="Áo Dài Chụp Hình" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 class="font-display text-[20px] md:text-[24px] font-bold text-center uppercase">Áo Dài Chụp Hình</h3>
+                    <p class="font-display text-[14px] md:text-[16px] text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Khoảnh khắc đẹp</p>
+                </div>
+            </button>
+
+            <!-- Button 4: Áo Dài Cách Tân -->
+            <button class="ao-dai-button relative h-[400px] md:h-[500px] w-full md:w-[277px] rounded overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer group" data-category="ao-dai-cach-tan">
+                <img src="assets/images/theloai/c37405083bc61a1123fb9cb878dd15885013870e.png" alt="Áo Dài Cách Tân" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 class="font-display text-[20px] md:text-[24px] font-bold text-center uppercase">Áo Dài Cách Tân</h3>
+                    <p class="font-display text-[14px] md:text-[16px] text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Phong cách mới</p>
+                </div>
+            </button>
+        </div>
+
+        <!-- Áo Dài Detail Section - Carousel -->
+        <div class="flex flex-col gap-[16px] items-center pb-[20px] w-full max-w-[1140px] mt-[64px]">
+            <div class="flex flex-col gap-[16px] items-center w-full relative">
+                <!-- Fixed Title -->
+                <div class="flex items-center justify-center p-[10px]">
+                    <p class="carousel-title font-display text-[20px] md:text-[24px] text-black uppercase">Áo Dài Cưới</p>
+                </div>
+                
+                <!-- Carousel Container -->
+                <div class="carousel-container relative w-full overflow-hidden">
+                    <!-- Carousel Wrapper -->
+                    <div class="carousel-wrapper flex transition-transform duration-500 ease-in-out">
+                        
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide min-w-full flex flex-col gap-[16px]">
+                            <div class="flex flex-col md:flex-row gap-[32px] md:gap-[64px] items-center justify-center w-full px-4">
+                                <div class="w-[300px] h-[300px] md:w-[470px] md:h-[470px] rounded-full overflow-hidden shrink-0">
+                                    <img src="assets/images/theloai/d211fae38f426284c24be3f55c01210fe30ce61a.png" alt="Áo Dài Cưới" class="w-full h-full object-cover">
+                                </div>
+                                <div class="font-display text-[16px] md:text-[20px] text-black text-justify flex-1 max-w-[600px]">
+                                    <p class="mb-4">Áo dài cưới là phiên bản tinh xảo và sang trọng nhất của áo dài, được thiết kế để biến ngày trọng đại của bạn trở nên trọn vẹn hơn. Với tông đỏ tượng trưng cho may mắn, tông trắng cho sự thuần khiết, hay vàng champagne sang trọng, áo dài cưới được tạo nên từ những chất liệu cao cấp như ren Pháp, lụa Nhật, gấm thêu họa tiết hoàng gia.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide min-w-full flex flex-col gap-[16px]">
+                            <div class="flex flex-col md:flex-row gap-[32px] items-center w-full px-4">
+                                <div class="font-display text-[16px] md:text-[20px] text-black text-justify flex-1 max-w-[523px]">
+                                    <p class="mb-4">Các nghệ nhân chăm chút từng chi tiết đường chỉ thêu, họa tiết rồng phượng, hoa sen, ánh kim và ngọc trai đính tay tạo nên vẻ đẹp cầu kỳ mà vẫn thanh nhã. Form ôm vừa vặn giúp tôn dáng, tạo hiệu ứng thon gọn, dòng tà dài thướt tha giúp cô dâu trở nên quý phái như một nàng thơ Việt.</p>
+                                    <p>Đây không chỉ là trang phục cưới mà là một tác phẩm biểu tượng cho hạnh phúc, nơi vẻ đẹp truyền thống và nét sang trọng hiện đại hòa quyện, giúp cô dâu tỏa sáng trong từng ánh nhìn.</p>
+                                </div>
+                                <div class="flex gap-[24px] items-center justify-end flex-1">
+                                    <div class="h-[350px] md:h-[484px] w-[180px] md:w-[256px] overflow-hidden rounded">
+                                        <img src="assets/images/theloai/59530bd87f5e612186c5b9f24fc782eebd99f170.png" alt="Áo Dài Cưới Detail 1" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="h-[350px] md:h-[484px] w-[180px] md:w-[256px] overflow-hidden rounded">
+                                        <img src="assets/images/theloai/54a39660893342567fe11720a40c6db3940ccd4f.png" alt="Áo Dài Cưới Detail 2" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button class="carousel-prev absolute -left-12 md:-left-16 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 z-10 hidden md:flex items-center justify-center">
+                        <span class="material-icons">chevron_left</span>
+                    </button>
+                    <button class="carousel-next absolute -right-12 md:-right-16 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 z-10 hidden md:flex items-center justify-center">
+                        <span class="material-icons">chevron_right</span>
+                    </button>
+                </div>
+
+                <!-- Pagination Dots -->
+                <div class="flex gap-[8px] items-center justify-center mt-[16px]">
+                    <button class="carousel-dot w-[12px] h-[12px] rounded-full bg-black transition-all duration-300" data-slide="0"></button>
+                    <button class="carousel-dot w-[12px] h-[12px] rounded-full bg-gray-300 transition-all duration-300" data-slide="1"></button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer (Reused from index.html) -->
+    <footer class="bg-text-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <div class="flex flex-col gap-6">
+                <div>
+                    <h3 class="font-logo text-2xl font-bold text-primary tracking-[0.5px]">Aodaiviet</h3>
+                </div>
+                <p class="text-sm leading-relaxed text-white/80">
+                    <span class="font-logo">AODAIVIET</span> là một trong những thương hiệu tiên phong trên thị trường áo dài thêu tay, 
+                    bằng những đường nét bay bổng và kĩ thuật tinh xảo, phối hợp với từng gam màu vô cùng tinh tế.
+                </p>
+                <div class="flex flex-col gap-2">
+                    <p class="text-sm text-white/80"><strong class="text-white">Địa chỉ:</strong> Km9 Trường Đại Học Hà Nội - Nam Từ Liêm</p>
+                    <p class="text-sm text-white/80"><strong class="text-white">SĐT:</strong> 0987.675.456</p>
+                    <p class="text-sm text-white/80"><strong class="text-white">Email:</strong> <span class="font-logo">Aodaiviet</span>345@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
